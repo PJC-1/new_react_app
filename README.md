@@ -9,10 +9,15 @@
 ## Note:
 1.  You might have some errors setting up, it's possible that you will need to install 'babel', `webpack`, and `webpack-dev-server` globally on your machine. You can run this in your terminal `npm install babel webpack webpack-dev-server -g`, this might get you through the initial set up.
 
-## Some things I'm learning about react so far:
+## Some things I'm learning about react so far, some things might not be right, let me know if you see something:
 1.  The `App.js` is capitalized because it is a react component and naming the file with a capitalized letter is a react convention. Here is a link to a stackoverflow post about this. `http://stackoverflow.com/questions/30373343/reactjs-component-names-must-begin-with-capital-letters`
 2.  The `main.js` is the entry into our application.
 3.  The `webpack.config.js` is where all of our javascript will be compiled and our JSX will be compiled into javascript. This is where the development server is launched.
 4.  `devServer` in our `webpack.config.js` has `inline: true`, this will allow auto reload.
 5.  The `div` with the `id="app"` in our `index.html` will be our target for where content will be rendered to. We also have a `script` tag that will load our `index.js`, which is going to be the bundled file we get from webpack.
 6.  In our `main.js` we use the render function, which takes two arguments: first being the component we are going to render (our `<App />` component), and the second is the location where it will be rendered (our target, `document.getElementById('app')`).
+7.  `state` is for properties on a component that will change and `props` are static properties that are passed in.
+8.  `super()` provides the context for `this` within our component.
+9.  `this.state` is where you can put values for the state within an object and you can access these values of state by interpolating them similar to `this.props`.
+10. The `render()` can only return a single node, so when you have more than one node in the render function you have to wrap the whole thing in a `<div>` and if you want to utilize the whitespace you have to wrap the whole thing in parentheses.
+11. `bind(this)` explicitly connects `this` scope of the event handler function to the `this` in the component.

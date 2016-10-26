@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 class App extends React.Component {
   constructor(){
     //super provides the context for 'this' within our component
@@ -18,6 +17,11 @@ class App extends React.Component {
     //e.target.value is the value that we are going to pass into the key 'txt'
     this.setState({txt: e.target.value})
   }
+  //in the render we have parentheses and a div that wrap the whole thing
+  //so that we only have one node.
+  //we created an input field, and to trigger the update we add a 'onChange'
+  //event, and call this.update, and bind that to this.
+  //note that the 'this' in the render is the same 'this' in context of our App component
   render(){
     return (
       <div>

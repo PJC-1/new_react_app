@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 class App extends React.Component {
   render(){
-    return <div>{this.props.txt}</div>
+    let txt = this.props.txt
+    return <div>{txt}</div>
   }
 }
 
@@ -13,7 +14,19 @@ class App extends React.Component {
 
 // export default App
 
+App.propTypes = {
+  txt: React.PropTypes.string,
+  //isRequired will need to be specified in the component
+  cat: React.PropTypes.number.isRequired
+}
+
+//this is where you can declare default props which will
+//be rendered if something else is not specified in the App component
+App.defaultProps = {
+  txt: 'this is the default txt'
+}
+
 ReactDOM.render(
-  <App txt="this is the props text" />,
+  <App cat={5} txt="this is the props value" />,
   document.getElementById('app')
 );

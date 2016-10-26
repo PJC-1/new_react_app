@@ -21,3 +21,6 @@
 9.  `this.state` is where you can put values for the state within an object and you can access these values of state by interpolating them similar to `this.props`.
 10. The `render()` can only return a single node, so when you have more than one node in the render function you have to wrap the whole thing in a `<div>` and if you want to utilize the whitespace you have to wrap the whole thing in parentheses.
 11. `bind(this)` explicitly connects `this` scope of the event handler function to the `this` in the component.
+12. The `owner-ownee` relationship is used to designate a `parent-child` relationship with React components as it differs from the DOM relationship.
+13. The goal is usually to have a `parent` component keeping track of `state` while `children` components do not require state at all, but only `props`. This is often referred to as Smart Containers and Dumb Components.
+14. The benefit of using `stateless components` is that, used properly, they are pure functions. No internal state or lifecycle methods, they return the same result every time and therefore offer no side effects. Also, stateless components usually equate to more reusable components with no concern about the logic of the application they are plugged into.

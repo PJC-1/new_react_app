@@ -13,8 +13,11 @@ class App extends React.Component {
     //you can cache here, so that you don't have to write out bind(this) later on.
     this.update = this.update.bind(this)
   }
-  //were using an update to manage our txt's state
-  //our custom method takes an event as an argument
+
+
+  //we had to import ReactDOM to use findDOMNode, by finding this.refs.red and
+  //getting it's value with .value
+  //
   update(e){
 
     this.setState({
@@ -24,6 +27,7 @@ class App extends React.Component {
     })
   }
 
+  //this is going to updating the this.state.red...green...blue
   render(){
     return (
       <div>
@@ -41,10 +45,18 @@ class App extends React.Component {
   }
 }
 
+//because refs wont work with stateless function components, we have to create
+//a class component with the input and the event handler.
+//since we are wrapping a div around the input, we need to add a ref to input or
+//else the "this" will be reffering to the div.
+//Thats why the argument in the findDOMNode is this.refs.red.refs.inp because
+//you need to refference this.refs refs, which are refs.inp
 class Slider extends React.Component {
   render(){
     return (
+      <div>
         <input ref="inp" type="range" min="0" max="255" onChange={this.props.update} />
+      </div>
     );
   }
 }

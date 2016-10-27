@@ -24,3 +24,6 @@
 12. The `owner-ownee` relationship is used to designate a `parent-child` relationship with React components as it differs from the DOM relationship.
 13. The goal is usually to have a `parent` component keeping track of `state` while `children` components do not require state at all, but only `props`. This is often referred to as Smart Containers and Dumb Components.
 14. The benefit of using `stateless components` is that, used properly, they are pure functions. No internal state or lifecycle methods, they return the same result every time and therefore offer no side effects. Also, stateless components usually equate to more reusable components with no concern about the logic of the application they are plugged into.
+15. `refs` are a way to reference an instance of a component from within our React application.
+16. Note that `refs` won't work with stateless function components, thats why in our app we created a new component.
+17. Since we are grabbing values from the `DOM` we need to make sure that we `import ReactDOM from 'react-dom'` and to get at those values we use `ReactDOM.findDOMNode` and pass in our `refs`.

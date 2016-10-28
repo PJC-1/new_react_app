@@ -6,12 +6,22 @@ class App extends React.Component {
     super();
 
     this.state = {
+      val: 0,
       red: 0,
       green: 0,
       blue: 0
     }
 
     this.update = this.update.bind(this)
+    this.updateTwo = this.updateTwo.bind(this)
+  }
+
+  updateTwo(e){
+    this.setState({val: this.state.val +1 })
+  }
+
+  componentWillMount(){
+    console.log('mounting')
   }
 
   update(e){
@@ -25,8 +35,10 @@ class App extends React.Component {
 
   // here we are going to return a another component named Button.
   render(){
+    console.log('rendering!')
     return (
       <div>
+        <button onClick={this.updateTwo}>{this.state.val}</button>
         <Button> I <Heart/> tacos </Button>
         <br />
         <Slider ref="red" update={this.update} />
@@ -40,6 +52,35 @@ class App extends React.Component {
         <br />
       </div>
     );
+  }
+
+  componentDidMount(){
+    console.log('mounted')
+  }
+
+  componentWillUnmount(){
+    console.log('bye!')
+  }
+}
+
+class Wrapper extends React.Component {
+  constructor(){
+    super();
+  }
+  mount(){
+    ReactDOM.render(<App />, document.getElementById('a'))
+  }
+  unmount(){
+    ReactDOM.unmountComponentAtNode(document.getElementById('a'))
+  }
+  render(){
+    return (
+      <div>
+        <button onClick={this.mount.bind(this)}>Mount</button>
+        <button onClick={this.unmount.bind(this)}>Unmount</button>
+        <div id="a"></div>
+      </div>
+    )
   }
 }
 
@@ -61,5 +102,4 @@ class Slider extends React.Component {
 
 const Heart = () => <span className="glyphicon glyphicon-heart"></span>
 
-
-export default App
+export default Wrapper

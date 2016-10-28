@@ -23,10 +23,11 @@ class App extends React.Component {
     })
   }
 
+  // here we are going to return a another component named Button.
   render(){
     return (
       <div>
-        <Button> I <Heart/> sf </Button>
+        <Button> I <Heart/> tacos </Button>
         <br />
         <Slider ref="red" update={this.update} />
         {this.state.red}

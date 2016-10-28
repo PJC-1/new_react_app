@@ -28,3 +28,4 @@
 16. Note that `refs` won't work with stateless function components, thats why in our app we created a new component.
 17. Since we are grabbing values from the `DOM` we need to make sure that we `import ReactDOM from 'react-dom'` and to get at those values we use `ReactDOM.findDOMNode` and pass in our `refs`.
 18. When we want to access the `innerHTML` or nested components of another component, we can use `this.props.children`.
+19. In terms of the mounting lifecycle phases of a React component, when a component is added or removed from the `DOM`, this is called mounting and unmounting the component.

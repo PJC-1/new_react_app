@@ -54,12 +54,17 @@ class App extends React.Component {
     );
   }
 
+  // here wer are declaring inc (for increment), and set interval to update
+  //every half second
   componentDidMount(){
-    console.log('mounted')
+    this.inc = setInterval(this.updateTwo,500)
   }
 
+  //we need to clear the interval when we unmount because if we don't will
+  //cause an error that says were are calling setState on a component that
+  //been unmounted.
   componentWillUnmount(){
-    console.log('bye!')
+    clearInterval(this.inc)
   }
 }
 

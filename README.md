@@ -29,3 +29,6 @@
 17. Since we are grabbing values from the `DOM` we need to make sure that we `import ReactDOM from 'react-dom'` and to get at those values we use `ReactDOM.findDOMNode` and pass in our `refs`.
 18. When we want to access the `innerHTML` or nested components of another component, we can use `this.props.children`.
 19. In terms of the mounting lifecycle phases of a React component, when a component is added or removed from the `DOM`, this is called mounting and unmounting the component.
+20. When talking about the component mounting lifecycle phases. During the `componentWillMount` phase, the component is ready to go into the `DOM`, but we don't have access to the `DOM`. Access to our `state` and access to our `props` are available. This is means we can change the state before the component mounted.
+21. In `componentDidMount`, we have access to our component in the actual `DOM`, that is where you can console.log `ReactDOM.findDOMNode`, so when you mount you will see the actual `HTML` in the `DOM` in your console.
+22. In `componentWillUnmount`, we need to make sure we clean up any processes we have running. In our app we have the `this.inc`, which increments the update every half second. We have to `clearInterval(this.inc)` so we wont get the error message that ways we're calling setState on a component thats been unmounted.

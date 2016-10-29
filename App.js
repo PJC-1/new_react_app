@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   componentWillMount(){
-    console.log('mounting')
+    this.setState({m: 2})
   }
 
   update(e){
@@ -38,7 +38,7 @@ class App extends React.Component {
     console.log('rendering!')
     return (
       <div>
-        <button onClick={this.updateTwo}>{this.state.val}</button>
+        <button onClick={this.updateTwo}>{this.state.val * this.state.m}</button>
         <Button> I <Heart/> tacos </Button>
         <br />
         <Slider ref="red" update={this.update} />

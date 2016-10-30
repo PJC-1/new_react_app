@@ -36,3 +36,5 @@
 24. The `componentWillReceiveProps` gives us an opportunity to update state by reacting to a prop transition before the `render()` call is made.
 25. The `shouldComponentUpdate` allows us to set conditions on when we should update a component so that we are not rendering constantly.
 26. `componentDidUpdate` lets us react to a component updating. both the `state` and the `props` are being updated even if were not re-rendering every single increment.
+27. Higher order components will allow you to apply behaviors to multiple React components. For demo code on higher order components, check `higher_order_components` branch.
+28. The `spread operator` is syntactical-sugar in `ES6` which is a direct way to access a collection. An example would be if you had an array like `let arr = [0,1,2,3]` you can access every element with the spread operator: `console.log(...arr)`.

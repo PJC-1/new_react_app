@@ -21,8 +21,11 @@ let Mixin = InnerComponent => class extends React.Component {
 }
 
 const Button = (props) => <button onClick={props.update}>{props.txt} - {props.val}</button>
+const Label = (props) => <label onMouseMove={props.update}>{props.txt} - {props.val}</label>
+
 
 let ButtonMixed = Mixin(Button)
+let LabelMixed = Mixin(Label)
 
 class App extends React.Component {
   constructor(){
@@ -40,6 +43,7 @@ class App extends React.Component {
     return (
       <div>
         <ButtonMixed txt="Button" />
+        <LabelMixed txt="Label" />
       </div>
     );
   }

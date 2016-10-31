@@ -38,3 +38,4 @@
 26. `componentDidUpdate` lets us react to a component updating. both the `state` and the `props` are being updated even if were not re-rendering every single increment.
 27. Higher order components will allow you to apply behaviors to multiple React components. For demo code on higher order components, check `higher_order_components` branch.
 28. The `spread operator` is syntactical-sugar in `ES6` which is a direct way to access a collection. An example would be if you had an array like `let arr = [0,1,2,3]` you can access every element with the spread operator: `console.log(...arr)`.
+29. In our example we mix in the functionality from our mixin function into our button, by setting a variable ButtonMixed which is `Mixin()` and pass in `Button`, check the `higher_order_components` branch to see this example.

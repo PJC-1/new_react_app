@@ -28,17 +28,6 @@ let ButtonMixed = Mixin(Button)
 let LabelMixed = Mixin(Label)
 
 class App extends React.Component {
-  constructor(){
-    super();
-    this.update = this.update.bind(this)
-    this.state = {val: 0}
-  }
-  update(e){
-    this.setState({val: this.state.val + 1})
-  }
-  componentWillMount(){
-    console.log('will mount')
-  }
   render(){
     return (
       <div>
@@ -46,9 +35,6 @@ class App extends React.Component {
         <LabelMixed txt="Label" />
       </div>
     );
-  }
-  componentDidMount(){
-    console.log('mounted')
   }
 }
 

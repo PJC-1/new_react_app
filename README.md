@@ -41,3 +41,4 @@
 29. In our example we mix in the functionality from our mixin function into our button, by setting a variable ButtonMixed which is `Mixin()` and pass in `Button`, check the `higher_order_components` branch to see this example.
 30. When creating React components one focus should be that your components be reusable as well as composable. To make more re-useable React components, you can define common `APIs` for similar component types.
 31. Note: There is no clear method in React for extending an existing component, but `mixins` are a great place to start. You could wrap the component you want to inherit from and call it's methods using a ref. example: `return <InheritFromThisComponent ref="comp" />`.
+32. Each `child` in an array or iterator should have a unique key prop to avoid errors. A `unique key` is required amongst siblings.

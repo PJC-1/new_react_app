@@ -39,5 +39,5 @@
 27. Higher order components will allow you to apply behaviors to multiple React components. For demo code on higher order components, check `higher_order_components` branch.
 28. The `spread operator` is syntactical-sugar in `ES6` which is a direct way to access a collection. An example would be if you had an array like `let arr = [0,1,2,3]` you can access every element with the spread operator: `console.log(...arr)`.
 29. In our example we mix in the functionality from our mixin function into our button, by setting a variable ButtonMixed which is `Mixin()` and pass in `Button`, check the `higher_order_components` branch to see this example.
-30. To make more re-useable React components, you can define common `APIs` for similar component types.
+30. When creating React components one focus should be that your components be reusable as well as composable. To make more re-useable React components, you can define common `APIs` for similar component types.
 31. Note: There is no clear method in React for extending an existing component, but `mixins` are a great place to start. You could wrap the component you want to inherit from and call it's methods using a ref. example: `return <InheritFromThisComponent ref="comp" />`.

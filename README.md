@@ -42,3 +42,5 @@
 30. When creating React components one focus should be that your components be reusable as well as composable. To make more re-useable React components, you can define common `APIs` for similar component types.
 31. Note: There is no clear method in React for extending an existing component, but `mixins` are a great place to start. You could wrap the component you want to inherit from and call it's methods using a ref. example: `return <InheritFromThisComponent ref="comp" />`.
 32. Each `child` in an array or iterator should have a unique key prop to avoid errors. A `unique key` is required amongst siblings.
+33. In our `jsx live compiler` example (code for this example can be checked out on `jsx_compiler` `branch`) we added `babel-core's browser`, which is babel's in-browser transformer. It is added to our `index.html` file as a `cdn`.
+34. In our example we use `babel.transform()` which we are getting from that in-browser code from babel. We pass in `code` as an argument. What is returned is the value of code from babel.transform().

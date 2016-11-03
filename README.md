@@ -1,5 +1,7 @@
 #Building another react app to learn more about react and webpack.
 
+## Check out [React](https://egghead.io/lessons/react-react-fundamentals-development-environment-setup)
+
 ## Not much to see yet, but to get started and see where i'm at you can:
 1.  `git clone`
 2.  `npm install`

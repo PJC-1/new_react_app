@@ -44,3 +44,4 @@
 32. Each `child` in an array or iterator should have a unique key prop to avoid errors. A `unique key` is required amongst siblings.
 33. In our `jsx live compiler` example (code for this example can be checked out on `jsx_compiler` `branch`) we added `babel-core's browser`, which is babel's in-browser transformer. It is added to our `index.html` file as a `cdn`.
 34. In our example we use `babel.transform()` which we are getting from that in-browser code from babel. We pass in `code` as an argument. What is returned is the value of code from babel.transform().
+35. You can write comments inside a return output by interpolating it i.e. `{/* this is a comment */}`.

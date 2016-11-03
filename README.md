@@ -47,3 +47,4 @@
 35. You can write comments inside a return output by interpolating it i.e. `{/* this is a comment */}`.
 36. When doing in-line style in React, you don't need to add `px` if your using pixel unit, React will take care of that for you.
 37. If your adding inline styles in React, you could cache a an object with the styles and then do `style=` and then interpolate the style variable that you cached earlier.
+38. The React Dev Tools is a Chrome plugin that provides handy ways to inspect and debug your React components. The react dev tools will show the `state`, `props`, and other helpful information that you wouldn't get from the regular chrome dev tools. You can also change values of the `state` or `props` and see the changes in the virtual DOM just like you would with the css in the regular dev tools.

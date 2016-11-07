@@ -1,5 +1,7 @@
 #Building another react app to learn more about react and webpack.
 
+## Check out [React](https://egghead.io/lessons/react-react-fundamentals-development-environment-setup)
+
 ## Not much to see yet, but to get started and see where i'm at you can:
 1.  `git clone`
 2.  `npm install`
@@ -42,3 +44,9 @@
 30. When creating React components one focus should be that your components be reusable as well as composable. To make more re-useable React components, you can define common `APIs` for similar component types.
 31. Note: There is no clear method in React for extending an existing component, but `mixins` are a great place to start. You could wrap the component you want to inherit from and call it's methods using a ref. example: `return <InheritFromThisComponent ref="comp" />`.
 32. Each `child` in an array or iterator should have a unique key prop to avoid errors. A `unique key` is required amongst siblings.
+33. In our `jsx live compiler` example (code for this example can be checked out on `jsx_compiler` `branch`) we added `babel-core's browser`, which is babel's in-browser transformer. It is added to our `index.html` file as a `cdn`.
+34. In our example we use `babel.transform()` which we are getting from that in-browser code from babel. We pass in `code` as an argument. What is returned is the value of code from babel.transform().
+35. You can write comments inside a return output by interpolating it i.e. `{/* this is a comment */}`.
+36. When doing in-line style in React, you don't need to add `px` if your using pixel unit, React will take care of that for you.
+37. If your adding inline styles in React, you could cache a an object with the styles and then do `style=` and then interpolate the style variable that you cached earlier.
+38. The React Dev Tools is a Chrome plugin that provides handy ways to inspect and debug your React components. The react dev tools will show the `state`, `props`, and other helpful information that you wouldn't get from the regular chrome dev tools. You can also change values of the `state` or `props` and see the changes in the virtual DOM just like you would with the css in the regular dev tools.
